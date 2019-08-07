@@ -70,4 +70,27 @@ let main argv =
     |> fun x -> x.Trim()
     |> printfn "//--- Generated with FShade ---\n\n%s\n\n//--- Generated with FShade ---"
 
+    // Result
+    (*
+    //--- Generated with FShade ---
+
+    uniform int time;
+    in vec4 inColor;
+    in vec4 inPosition;
+    in vec2 inUV;
+    out vec4 ColorsOut;
+    void main()
+    {
+        float a = ((1.0 + inUV.x) + inColor.y);
+        for(int i = 1; (i < 6); i++)
+        {
+            a = (a + float(i));
+        }
+        float a1 = a;
+        ColorsOut = vec4(float(time), ((a1 * 0.5) + 2.0), float(inPosition.z), 1.0);
+    }
+
+    //--- Generated with FShade ---
+    *)
+
     0 // return an integer exit code
