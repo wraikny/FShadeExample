@@ -1,0 +1,10 @@
+source https://www.nuget.org/api/v2
+
+framework: auto-detect
+nuget FShade
+nuget FSharp.Core
+
+group Build
+source https://www.nuget.org/api/v2
+
+nuget FAKE
