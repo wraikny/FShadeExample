@@ -70,7 +70,7 @@ let main argv =
     |> fun x -> x.Trim()
     |> printfn "//--- Generated with FShade ---\n\n%s\n\n//--- Generated with FShade ---"
 
-    // Result
+    // Result (for Altseed GLSL)
     (*
     //--- Generated with FShade ---
 
