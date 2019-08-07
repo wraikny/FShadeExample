@@ -68,7 +68,11 @@ let main argv =
     |> regexReplace "fs_([a-zA-Z][0-9a-zA-Z]+)" @"$1"
     |> regexReplace "#version.*#ifdef Vertex.*#endif.*\n#ifdef Fragment(.*)#endif" "$1"
     |> fun x -> x.Trim()
-    |> printfn "//--- Generated with FShade ---\n\n%s\n\n//--- Generated with FShade ---"
+    |> printfn """//--- Generated with FShade ---
+
+%s
+
+//--- Generated with FShade ---"""
 
     // Result (for Altseed GLSL)
     (*
